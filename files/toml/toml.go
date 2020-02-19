@@ -29,8 +29,8 @@ const globalConfigurationKeyword = "~"
 // Usage:
 // app.Configure(iris.WithConfiguration(iris.TOML("myconfig.tml"))) or
 // app.Run([iris.Runner], iris.WithConfiguration(iris.TOML("myconfig.tml"))).
-func Get(filename string) interface{} {
-	var c interface{}
+func Get(filename string, dataResponse interface{}) interface{} {
+	// var c interface{} // map[string]string //
 
 	// check for globe configuration file and use that, otherwise
 	// return the default configuration if file doesn't exist.
@@ -55,7 +55,8 @@ func Get(filename string) interface{} {
 	}
 
 	// put the file's contents as toml to the default configuration(c)
-	if _, err := toml.Decode(string(data), &c); err != nil {
+
+	if _, err := toml.Decode(string(data), dataResponse); err != nil {
 		panic(fmt.Errorf("toml :%w", err))
 	}
 	// Author's notes:
@@ -63,7 +64,7 @@ func Get(filename string) interface{} {
 	// but I am always prefer to use the specific programming language's syntax
 	// and the original configuration name fields for external configuration files
 	// so we do 'toml: "TheConfigKeySameAsTheConfigField" instead.
-	return c
+	return dataResponse
 }
 
 // homeConfigurationFilename returns the physical location of the global configuration(yaml or toml) file.
