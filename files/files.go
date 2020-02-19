@@ -1,5 +1,7 @@
 package files
 
-func Test() {
+import "fmt"
 
+func Test() {
+	fmt.Print("test")
 }
