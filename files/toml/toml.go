@@ -8,10 +8,8 @@ import (
 	"path/filepath"
 	"runtime"
 )
-package toml
+
 const globalConfigurationKeyword = "~"
-
-
 
 // TOML reads Configuration from a toml-compatible document file.
 // Read more about toml's implementation at:
