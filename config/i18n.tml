@@ -1,0 +1,5 @@
+Default = "es-MX"
+URLParameter = "language"
+
+[Other]
+	MyServerName = "iris"

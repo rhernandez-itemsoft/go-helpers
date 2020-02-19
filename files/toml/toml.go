@@ -7,6 +7,8 @@ import (
 	"os/user"
 	"path/filepath"
 	"runtime"
+
+	"github.com/BurntSushi/toml"
 )
 
 const globalConfigurationKeyword = "~"

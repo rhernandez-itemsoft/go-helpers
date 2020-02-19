@@ -1,0 +1,5 @@
+Name = "localhost:8080"
+Owner = "rherl23@gmail.com"
+
+[Other]
+	MyServerName = "iris"
