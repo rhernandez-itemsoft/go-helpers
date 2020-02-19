@@ -1,3 +1,6 @@
-git tag -a v0.0.4 -m "version 0.0.4"
-
 git push origin --tags
+
+
+git tag -a v0.0.4 -m "Actualización de toml files para que pueda cargar el 'tipo' indicado"
+
+
