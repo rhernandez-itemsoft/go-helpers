@@ -3,9 +3,9 @@ package irespmdl
 //Response Formato de respuesta
 // Esta estructura controla la informacion que se envía en la respuesta JSON
 type Response struct {
-	Code     int
-	Messages []string
-	Data     interface{}
+	//Code     int
+	Messages []string    `json:"messages"`
+	Data     interface{} `json:"data"`
 }
 
 //IMatTable formato de respuesta para la tabla de material
@@ -60,8 +60,8 @@ type Format struct {
 //NewResponse retorna un objeto tipo Response
 func NewResponse() Response {
 	return Response{
-		Data:     nil,
-		Code:     0,
+		Data: nil,
+		//Code:     0,
 		Messages: nil,
 	}
 }
