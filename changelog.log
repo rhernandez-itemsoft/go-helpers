@@ -1,5 +1,7 @@
 git push origin --tags
 
+git tag -a v0.0.6 -m "Modificamos la estructura del iresponse"
+
 git tag -a v0.0.5 -m "Agregamos iresponse para manejear los http response"
 
 git tag -a v0.0.4 -m "Actualización de toml files para que pueda cargar el 'tipo' indicado"
